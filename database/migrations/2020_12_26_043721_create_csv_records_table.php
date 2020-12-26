@@ -15,6 +15,9 @@ class CreateCsvRecordsTable extends Migration
     {
         Schema::create('csv_records', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('module_code');
+            $table->string('module_name');
+            $table->string('module_term');
             $table->timestamps();
         });
     }
