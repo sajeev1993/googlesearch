@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/search', 'HomeController@googleSearch')->name('search');
+
+Route::get('/pdfview', 'HomeController@pdfview')->name('pdfview');
+
+
